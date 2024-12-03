@@ -36,7 +36,7 @@ class Tav:
         self.strength = stats[3]
         self.intelligence = stats[3]
         self.charisma = stats[4]
-        self.wisdom = stats[6]
+        self.wisdom = stats[5]
         self.dexterity = stats[1]
         self.constitution = stats[5]
 
@@ -45,8 +45,8 @@ class Tav:
             draw_d20(r)
             return r 
         
-        s = random.randit(1,20)
-        draw_d20-(s)
+        s = random.randint(1,20)
+        draw_d20(s)
 
 
         if s > s:

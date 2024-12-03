@@ -9,8 +9,8 @@ def print_dramatic_text(text: str, delay=0.1):
         time.sleep(delay)
     print()
 
-if __name__ == '__main__': 
-    print( 'Dungeons and Flagons')
+if __name__ == '__main__':
+    print('Dungeons and Flagons')
 
     # player = Tav('Hazel', 'Human')
     # player.print_character_sheet()
@@ -18,21 +18,21 @@ if __name__ == '__main__':
     
 locations = ['cave', 'bedroom', 'dungeon']
 r = random.randint(0, len(locations) -1)
-jobs = ['dragon, human, troll']
+jobs = ['dragon', 'human', 'troll']
 j = random.randint(0, len(jobs)-1)
 
 # collecting use input 
-name = input ('Name: ')
+name = input('Name: ')
 role = jobs[j]
 print('Role: ' + jobs[j])
-player = role(name, role)
+player = Tav(name, role)
 player.print_character_sheet()
 
-if player.role == 'Human':
+if player.role == 'human':
      print('You are a Human!')
-if player.role == 'Dragon!':
+if player.role == 'dragon':
      print('You are a Dragon!')
-if player.role == 'Troll':
+if player.role == 'troll':
      print('You are a Troll')
 
 # print(name)
@@ -42,9 +42,9 @@ print('Floor -1: Cave')
 print('Floor 1: Dungeon')
 print('Floor 2: Bedroom')
 print_dramatic_text('Which room would you like to explore?')
-room = input('Floor -1')
-if (room == 'cave'):
-     print_dramatic_text('You are in the cave!')
+room = input()
+if (room.lower() == 'floor -1'):
+    print_dramatic_text('You are in the cave!')
 roll = random.randint(1,20)
 draw_d20(roll)
 if roll == 6:
@@ -116,23 +116,7 @@ else:
                 print_dramatic_text('I have won against you again!')
         else:
             print_dramatic_text('You did not talk to the troll?')
-        Skully = '\UU0001F480'
+        Skully = '\U0001F480'
         print_dramatic_text(Skully + ' You traitor!')
         skully = '\U0001F480'
         print_dramatic_text(skully + 'You traitor!')
-
-    
-            
-
-
-
-
-
-         
-
-
-        
-
-
-
-   
